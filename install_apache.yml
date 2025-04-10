@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: remove Apache2 and PHP packages
+      apt:
+        name:
+          - apache2
+          - libapache2-mod-php
+        state: absent
+
